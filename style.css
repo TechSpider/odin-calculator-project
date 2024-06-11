@@ -1,5 +1,11 @@
+@font-face {
+    font-family: 'Digital-7';
+    src: url('./src/Digital7-rg1mL.ttf');
+}
+
 body {
     height: 100vh;
+    background-color: rgb(59, 110, 110);
 }
 
 .container {
@@ -10,8 +16,8 @@ body {
 }
 
 .calculator-container {
-    width: 400px;
-    height: 320px;
+    width: 500px;
+    aspect-ratio: 2/3;
     border: 3px solid black;
     border-radius: 12px;
 }
@@ -19,49 +25,82 @@ body {
 .results-screen {
     display: flex;
     box-sizing: border-box;
-    width: 400px;
-    height: 80px;
+    width: 500px;
+    height: 200px;
     border-bottom: 2px solid black;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    background-color: rgb(69, 69, 69);
 }
 
 .results {
-    font-size: 50px;
+    font-size: 60px;
+    font-family: 'Digital-7';
     margin-left: auto;
     margin-top: auto;
+    padding-left: 30px;
     padding-right: 20px;
-    padding-bottom: 8px;
+    padding-bottom: 20px;
+    color: white;
+    overflow: auto;
+    text-align: right;
 }
 
 .calculator-buttons {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px;
+    background-color: rgb(69, 69, 69);
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+
+.row {
+    display: flex;
+    gap: 8px;
 }
 
 button {
     flex: auto;
-    width: 75px;
-    height: 80px;
+    width: 110px;
+    height: 110px;
     border-color: gray;
+    font-size: 30px;
+    color: white;
 }
 
-#clear-button {
-    margin-right: auto;
-    height: 20px;
-    width: 78px;
-    flex: none;
-    border-top-left-radius: 9px;
-    border-bottom-right-radius: 12px;
-    border-left: none;
-    border-top: none;
+button:hover {
+    opacity: 70%;
 }
 
 #equals-button {
-    border-bottom-right-radius: 9px;
+    flex: 1;
+    background-color: rgb(244, 153, 26);
 }
 
-#plus-button {
-    border-bottom-left-radius: 9px;
+#zero-button {
+    flex: 2;
 }
+
+#period-button {
+    flex: 1;
+}
+
+.operator-button {
+    background-color: rgb(120, 33, 126);
+    border: none;
+    border-radius: 6px;
+}
+
+.num-button {
+    border: none;
+    border-radius: 6px;
+    background-color: green;
+}
+
+
 
 
 
